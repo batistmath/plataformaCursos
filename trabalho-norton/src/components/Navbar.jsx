@@ -26,11 +26,20 @@ const getActiveStyle = ({ isActive }) => ({
 function Navbar() {
   return (
     <nav style={navStyle}>
+      <NavLink to="/home" style={getActiveStyle}>
+        Página Inicial
+      </NavLink>
       <NavLink to="/alunos" style={getActiveStyle}>
         Gerenciar Alunos
       </NavLink>
       <NavLink to="/professores" style={getActiveStyle}>
         Gerenciar Professores
+      </NavLink>
+      <NavLink to="/cursos/player" style={getActiveStyle}>
+
+
+      
+        Curso
       </NavLink>
     </nav>
   );

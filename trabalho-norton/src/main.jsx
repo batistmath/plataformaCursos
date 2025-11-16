@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import GerenciarAlunos from './pages/GerenciarAlunos.jsx'
 import GerenciarProfessores from './pages/GerenciarProfessores.jsx'
+import ClassPage from './pages/ClassPage.jsx'
 
 import './index.css'
 
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
       {
         path: "professores",
         element: <GerenciarProfessores />,
+      },
+      {
+        path: "cursos/player",
+        element: <ClassPage />
+        
       },
       {
         index: true, 
