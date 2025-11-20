@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import App from './App.jsx'
+// Importe o Dashboard recém criado
+import Dashboard from './pages/Dashboard.jsx' 
 import GerenciarAlunos from './pages/GerenciarAlunos.jsx'
 import GerenciarProfessores from './pages/GerenciarProfessores.jsx'
 import ClassPage from './pages/ClassPage.jsx'
@@ -14,6 +16,11 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
+      // Rota inicial agora aponta para o Dashboard
+      {
+        index: true,
+        element: <Dashboard /> 
+      },
       {
         path: "alunos",
         element: <GerenciarAlunos />,
@@ -25,11 +32,6 @@ const router = createBrowserRouter([
       {
         path: "cursos/player",
         element: <ClassPage />
-        
-      },
-      {
-        index: true, 
-        element: <GerenciarAlunos />
       }
     ],
   },

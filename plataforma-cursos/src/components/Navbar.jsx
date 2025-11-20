@@ -1,46 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-
-const navStyle = {
-  background: '#333',
-  padding: '1rem',
-  display: 'flex',
-  gap: '1.5rem',
-  justifyContent: 'center'
-};
-
-const linkStyle = {
-  textDecoration: 'none',
-  color: '#ddd',
-  fontWeight: 'bold',
-  fontSize: '1.1rem',
-  padding: '0.5rem'
-};
-
-const getActiveStyle = ({ isActive }) => ({
-  ...linkStyle,
-  color: isActive ? '#007bff' : '#ddd',
-  borderBottom: isActive ? '2px solid #007bff' : 'none'
-});
+import './Navbar.css';
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50; 
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    document.addEventListener('scroll', handleScroll);
+
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
+
   return (
-    <nav style={navStyle}>
-      <NavLink to="/home" style={getActiveStyle}>
-        Página Inicial
-      </NavLink>
-      <NavLink to="/alunos" style={getActiveStyle}>
-        Gerenciar Alunos
-      </NavLink>
-      <NavLink to="/professores" style={getActiveStyle}>
-        Gerenciar Professores
-      </NavLink>
-      <NavLink to="/cursos/player" style={getActiveStyle}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-logo">
+        Fechamentos<span className="highlight">Cursos</span>
+      </div>
 
-
-      
-        Curso
-      </NavLink>
+      <div className="navbar-links">
+        <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Dashboard
+        </NavLink>
+        <NavLink to="/alunos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Alunos
+        </NavLink>
+        <NavLink to="/professores" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Professores
+        </NavLink>
+        <NavLink to="/cursos/player" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Sala de Aula
+        </NavLink>
+      </div>
     </nav>
   );
 }
