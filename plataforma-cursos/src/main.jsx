@@ -8,7 +8,7 @@ import Dashboard from './pages/Dashboard.jsx'
 import GerenciarAlunos from './pages/GerenciarAlunos.jsx'
 import GerenciarProfessores from './pages/GerenciarProfessores.jsx'
 import ClassPage from './pages/ClassPage.jsx'
-
+import PerfilAluno from './pages/PerfilAluno.jsx'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -32,7 +32,11 @@ const router = createBrowserRouter([
       {
         path: "cursos/player",
         element: <ClassPage />
-      }
+      },
+    {
+      path: "perfil",
+      element: <PerfilAluno />
+    }
     ],
   },
 ]);

@@ -39,7 +39,22 @@ function Navbar() {
         <NavLink to="/cursos/player" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
           Sala de Aula
         </NavLink>
+        
+     
+        <NavLink to="/gerenciar-aulas" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Administração
+        </NavLink>
       </div>
+
+    <NavLink to="/perfil" className="navbar-profile" style={{ textDecoration: 'none' }}>
+        <div className="profile-info">
+            <span className="profile-name">Aluno Teste</span>
+            <small className="profile-role">Iniciante</small>
+        </div>
+        <div className="profile-avatar">
+            <span>AT</span> 
+        </div>
+      </NavLink>
     </nav>
   );
 }
