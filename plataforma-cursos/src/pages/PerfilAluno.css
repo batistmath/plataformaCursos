@@ -4,21 +4,21 @@
     min-height: 90vh;
 }
 
-/* Layout em Grid: Sidebar (300px) + Resto */
+
 .perfil-layout {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 30px;
 }
 
-/* Responsividade para celular */
+
 @media (max-width: 768px) {
     .perfil-layout {
         grid-template-columns: 1fr;
     }
 }
 
-/* --- SIDEBAR (Card do Usuário) --- */
+
 .user-card {
     background: white;
     padding: 30px;
@@ -84,7 +84,7 @@
 .btn-save { background: #198754; color: white; }
 .btn-save:hover { background: #157347; }
 
-/* --- CONTEÚDO PRINCIPAL --- */
+
 .content-section {
     background: white;
     padding: 30px;
@@ -102,7 +102,7 @@
     color: #333;
 }
 
-/* Formulário */
+
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -127,7 +127,7 @@
     font-size: 1rem;
 }
 
-/* Estilo do input quando está DESABILITADO (modo visualização) */
+
 .form-group input:disabled {
     background-color: transparent;
     border: 1px solid transparent;
@@ -137,10 +137,9 @@
 }
 
 .input-disabled-fixed:disabled {
-    color: #999 !important; /* Campo matricula fica cinza */
+    color: #999 !important;
 }
 
-/* --- CURSOS MINI (Versão compacta para o perfil) --- */
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

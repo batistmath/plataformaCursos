@@ -10,6 +10,7 @@ import GerenciarProfessores from './pages/GerenciarProfessores.jsx'
 import ClassPage from './pages/ClassPage.jsx'
 import PerfilAluno from './pages/PerfilAluno.jsx'
 import './index.css'
+import GerenciarAulas from './pages/GerenciarAulas.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
     {
       path: "perfil",
       element: <PerfilAluno />
-    }
+    },
+    {
+  path: "gerenciar-aulas",
+  element: <GerenciarAulas />
+}
     ],
   },
 ]);

@@ -1,0 +1,203 @@
+.admin-page {
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    min-height: 90vh;
+}
+
+.admin-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.admin-header-flex h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.course-selector-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.course-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr; 
+    gap: 25px;
+    align-items: start;
+}
+
+@media (max-width: 850px) {
+    .admin-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Cards */
+.admin-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card-title {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; 
+}
+
+.short-input {
+    width: 50% !important;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1;
+    font-weight: bold;
+}
+
+.btn-cancel {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.lesson-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lesson-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background 0.2s;
+}
+
+.lesson-item:last-child {
+    border-bottom: none;
+}
+
+.lesson-item:hover {
+    background-color: #f9f9f9;
+}
+
+.active-edit {
+    background-color: #fff3cd !important; /* Amarelo claro quando editando */
+    border-left: 4px solid #ffc107;
+}
+
+.lesson-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lesson-number {
+    background: #e9ecef;
+    color: #555;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.lesson-meta {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 3px;
+}
+
+.lesson-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s;
+}
+
+.action-btn:hover { transform: scale(1.1); }
+
+.action-btn.edit { background-color: #e7f1ff; color: #0d6efd; }
+.action-btn.delete { background-color: #ffebe9; color: #dc3545; }
