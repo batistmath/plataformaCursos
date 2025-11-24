@@ -30,6 +30,9 @@ function Navbar() {
         <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
           Dashboard
         </NavLink>
+        <NavLink to="/curso" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Cursos
+        </NavLink>
         <NavLink to="/alunos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
           Alunos
         </NavLink>
@@ -38,9 +41,7 @@ function Navbar() {
         </NavLink>
         <NavLink to="/cursos/player" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
           Sala de Aula
-        </NavLink>
-        
-     
+        </NavLink> 
         <NavLink to="/gerenciar-aulas" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
           Administração
         </NavLink>

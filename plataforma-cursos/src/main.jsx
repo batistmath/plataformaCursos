@@ -11,6 +11,7 @@ import ClassPage from './pages/ClassPage.jsx'
 import PerfilAluno from './pages/PerfilAluno.jsx'
 import './index.css'
 import GerenciarAulas from './pages/GerenciarAulas.jsx';
+import GerenciarCursos from './pages/GerenciarCursos.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,10 +39,14 @@ const router = createBrowserRouter([
       path: "perfil",
       element: <PerfilAluno />
     },
+        {
+      path: "curso",
+      element: <GerenciarCursos />
+    },
     {
-  path: "gerenciar-aulas",
-  element: <GerenciarAulas />
-}
+        path: "gerenciar-aulas",
+        element: <GerenciarAulas />
+    }
     ],
   },
 ]);

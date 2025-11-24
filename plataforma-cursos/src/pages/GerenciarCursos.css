@@ -1,0 +1,282 @@
+.admin-page {
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    min-height: 90vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.admin-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.admin-header-flex h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.admin-header-flex p {
+    margin: 5px 0 0;
+    color: #6c757d;
+}
+
+/* Box lateral do header */
+.course-selector-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.highlight-box strong {
+    display: block;
+    color: #2c3e50;
+}
+
+.highlight-subtitle {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin: 2px 0 0;
+}
+
+/* Select padrão reaproveitado */
+.course-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    min-width: 200px;
+}
+
+/* Grid principal */
+.admin-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+@media (max-width: 850px) {
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Cards */
+.admin-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card-title {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+}
+
+.short-input {
+    width: 50% !important;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Botões padrão */
+.btn-primary {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.15s;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1;
+    font-weight: bold;
+    transition: background 0.15s;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-cancel {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.15s;
+}
+
+.btn-cancel:hover {
+    background-color: #b02a37;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 30px 10px;
+    color: #7a7a7a;
+    font-size: 0.95rem;
+}
+
+/* ====== TABELA DOS CURSOS ====== */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.course-table thead {
+    background-color: #f1f3f5;
+}
+
+.course-table th,
+.course-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.course-table th {
+    font-weight: 600;
+    color: #495057;
+    white-space: nowrap;
+}
+
+.course-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Linha em edição */
+.row-editing {
+    background-color: #fff3cd !important;
+    border-left: 4px solid #ffc107;
+}
+
+/* Status pill */
+.status-pill {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-ativo {
+    background-color: #e7f9ed;
+    color: #137b3a;
+}
+
+.status-rascunho {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-arquivado {
+    background-color: #e2e3e5;
+    color: #495057;
+}
+
+/* Ações */
+.lesson-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.table-actions {
+    justify-content: flex-end;
+}
+
+.action-btn {
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s, box-shadow 0.1s;
+    font-size: 1rem;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.action-btn.edit {
+    background-color: #e7f1ff;
+    color: #0d6efd;
+}
+
+.action-btn.delete {
+    background-color: #ffebe9;
+    color: #dc3545;
+}
